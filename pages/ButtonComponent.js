@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FloatingActionButton from "../components/Button/FloatingActionButton";
 import ActionButtonwithMultipleOption from "../components/Button/ActionButtonwithMultipleOption";
 import ExpandableCircularButton from "../components/Button/ExpandableCircularButton";
-import SwipeButton from "../components/Button/SwipeButton";
+import SwipeButtonComp from "../components/Button/SwipeButtonComp";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +29,7 @@ const ButtonComponent = () => {
       />
       <Stack.Screen
         name="Swipe Button"
-        component={SwipeButton}
+        component={SwipeButtonComp}
         options={{ title: "SwipeButton" }}
       />
     </Stack.Navigator>
@@ -45,7 +45,9 @@ const DetailComponent = ({ navigation }) => {
         <Text>Floating Action Button</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => navigation.navigate("Action Button with Multiple Option")}
+        onPress={() =>
+          navigation.navigate("Action Button with Multiple Option")
+        }
         style={{ padding: 20, borderBottomWidth: 1 }}>
         <Text>Action Button with Multiple Option</Text>
       </TouchableOpacity>
